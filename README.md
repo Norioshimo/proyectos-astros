@@ -1,25 +1,11 @@
-# Repositorio de Proyectos con Astro.js
+# Landing Page con Astro.js
 
-Este repositorio contiene múltiples proyectos desarrollados con [Astro.js](https://astro.build/), organizados en diferentes ramas.  
-Cada rama representa un proyecto independiente.
-
-## Cambio entre Proyectos
-
-Para cambiar de proyecto, usa el siguiente comando:
-
-```sh
-git checkout nombre-de-la-rama
-```
-
-Para listar todas las ramas disponibles:
-
-```sh
-git branch -a
-```
+Este proyecto es un modelo de Landing Page desarrollado con [Astro.js](https://astro.build/).  
+Está diseñado para ser rápido, eficiente y fácil de desplegar.
 
 ## Instalación y Uso
 
-Después de cambiar a la rama deseada, instala las dependencias y ejecuta el proyecto:
+Ejecuta los siguientes comandos para instalar y ejecutar el proyecto en modo desarrollo:
 
 | Comando                   | Acción                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -30,16 +16,15 @@ Después de cambiar a la rama deseada, instala las dependencias y ejecuta el pro
 | `npm run astro ...`       | Ejecuta comandos CLI como `astro add`            |
 | `npm run astro -- --help` | Muestra ayuda sobre el CLI de Astro              |
 
-## Contribución
+## Rama del Proyecto
 
-Si deseas agregar un nuevo proyecto, crea una nueva rama basada en `main`:
+Este contenido está desarrollado en una rama específica del repositorio.  
+Para acceder a ella, usa:
 
 ```sh
-git checkout -b nombre-de-nueva-rama
+git checkout landingpage-ejemplo
 ```
-
-Luego, desarrolla tu proyecto y súbelo al repositorio.
 
 ## Licencia
 
-Este repositorio está bajo la licencia MIT.
+Este proyecto está bajo la licencia MIT.
