@@ -1,5 +1,7 @@
-<footer class="bg-zinc-900 py-10  mt-4">
-  <div class="container mx-auto flex flex-col md:flex-row justify-evenly text-center md:text-left gap-4">
+<footer class="bg-zinc-900 py-10 mt-4">
+  <div
+    class="container mx-auto flex flex-col md:flex-row justify-evenly text-center md:text-left gap-4"
+  >
     <div>
       <h4 class="font-bold text-xl">Site Map</h4>
       <a href="">Home</a>
@@ -20,4 +22,12 @@
       <a href="">TikTok</a>
     </div>
   </div>
+  <div class="text-center mt-20">
+    <p id="idDatatime"></p>
+  </div>
 </footer>
+
+<script> 
+  const idDatatime = document.getElementById("idDatatime") as HTMLElement;
+  idDatatime.innerText =  new Date().toLocaleDateString() + ' '+new Date().toLocaleTimeString();
+</script>
