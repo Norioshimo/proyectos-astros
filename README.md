@@ -1,45 +1,50 @@
-# Repositorio de Proyectos con Astro.js
+# Proyecto Practico Astro.js
 
-Este repositorio contiene múltiples proyectos desarrollados con [Astro.js](https://astro.build/), organizados en diferentes ramas.  
-Cada rama representa un proyecto independiente.
+Este proyecto es una migración basada en un template gratuito, adaptado y personalizado según las necesidades del equipo.
 
-## Cambio entre Proyectos
+## 🚀 Instalación y Ejecución
 
-Para cambiar de proyecto, usa el siguiente comando:
+Para instalar y levantar el proyecto, sigue estos pasos:
 
-```sh
-git checkout nombre-de-la-rama
-```
+1. Clona el repositorio en tu equipo:
+   ```sh
+   git clone <URL_DEL_REPOSITORIO>
+   cd <NOMBRE_DEL_PROYECTO>
+   ```
+2. Instala las dependencias necesarias:
+   ```sh
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```sh
+   npm run dev
+   ```
+   Esto iniciará el servidor localmente en `localhost:4321`.
 
-Para listar todas las ramas disponibles:
+4. Para construir el sitio para producción:
+   ```sh
+   npm run build
+   ```
+   Esto generará la salida en la carpeta `./dist/`.
 
-```sh
-git branch -a
-```
+5. Para previsualizar la compilación antes del despliegue:
+   ```sh
+   npm run preview
+   ```
 
-## Instalación y Uso
+## 🧞 Comandos
 
-Después de cambiar a la rama deseada, instala las dependencias y ejecuta el proyecto:
+Todos los comandos se ejecutan desde la raíz del proyecto en una terminal:
 
-| Comando                   | Acción                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Instala las dependencias                         |
-| `npm run dev`             | Inicia el servidor en `localhost:4321`           |
-| `npm run build`           | Construye el sitio para producción en `./dist/`  |
-| `npm run preview`         | Previsualiza el sitio antes de desplegarlo       |
-| `npm run astro ...`       | Ejecuta comandos CLI como `astro add`            |
-| `npm run astro -- --help` | Muestra ayuda sobre el CLI de Astro              |
+| Comando                  | Acción                                             |
+| :------------------------ | :------------------------------------------------- |
+| `npm install`             | Instala las dependencias                          |
+| `npm run dev`             | Inicia el servidor de desarrollo en `localhost:4321` |
+| `npm run build`           | Genera el sitio para producción en `./dist/`       |
+| `npm run preview`         | Previsualiza la compilación antes del despliegue   |
+| `npm run astro ...`       | Ejecuta comandos CLI como `astro add`, `astro check` |
+| `npm run astro -- --help` | Muestra ayuda sobre el CLI de Astro               |
 
-## Contribución
+---
 
-Si deseas agregar un nuevo proyecto, crea una nueva rama basada en `main`:
 
-```sh
-git checkout -b nombre-de-nueva-rama
-```
-
-Luego, desarrolla tu proyecto y súbelo al repositorio.
-
-## Licencia
-
-Este repositorio está bajo la licencia MIT.
