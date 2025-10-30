@@ -1,47 +1,62 @@
-# Astro Starter Kit: Minimal
+# Astro Proyecto Auth
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Proyecto desarrollado con **Astro.js** para implementar **autenticación con Google** usando **Firebase Authentication**.  
+Incluye manejo de rutas privadas (`/protected`) y flujo completo de inicio y cierre de sesión.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Características
 
-## 🚀 Project Structure
+- **Login con Google**  
+- **Registro automático del usuario** (Firebase Auth)  
+- **Logout / Cierre de sesión**  
+- **Ruta protegida** que muestra datos del usuario autenticado  
+- Integrado con **Firebase** para autenticación y manejo de sesión  
 
-Inside of your Astro project, you'll see the following folders and files:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Configuración de Firebase
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+1. Crea un proyecto en [Firebase Console](https://console.firebase.google.com/).  
+2. Habilita el **proveedor de autenticación de Google**.  
+3. Crea un archivo `.env` en la raíz del proyecto con tus credenciales de Firebase:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+   ```bash
+   WEBSITE_URL=http://localhost:4321
+   
+   PUBLIC_FIREBASE_API_KEY=xxxx
+   PUBLIC_FIREBASE_AUTH_DOMAIN=xxxx.firebaseapp.com
+   PUBLIC_FIREBASE_PROJECT_ID=xxxx
+   PUBLIC_FIREBASE_STORAGE_BUCKET=xxxx.appspot.com
+   PUBLIC_FIREBASE_MESSAGING_SENDER_ID=xxxx
+   PUBLIC_FIREBASE_APP_ID=xxxx
+   ```
 
-Any static assets, like images, can be placed in the `public/` directory.
+4. Asegúrate de importar y configurar Firebase en tu archivo `src/lib/firebase.ts`.
 
-## 🧞 Commands
+## Comandos
 
-All commands are run from the root of the project, from a terminal:
+Ejecuta estos comandos desde la raíz del proyecto:
 
-| Command                   | Action                                           |
+| Comando                   | Acción                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm install`             | Instala las dependencias                         |
+| `npm run dev`             | Inicia el servidor local en `localhost:4321`     |
+| `npm run build`           | Genera el sitio de producción en `./dist/`       |
+| `npm run preview`         | Previsualiza la versión de producción            |
+| `npm run astro ...`       | Ejecuta comandos CLI de Astro                    |
+| `npm run astro -- --help` | Muestra ayuda del CLI de Astro                   |
 
-## 👀 Want to learn more?
+## Notas Importantes
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Desactiva temporalmente el firewall** si bloquea la conexión a Firebase en entorno local.  
+- Asegúrate de **agregar los dominios autorizados** (como `http://localhost:4321`) en la configuración de autenticación de Firebase.  
+- Para producción, deberías agregar tu dominio desplegado a la lista de dominios permitidos en Firebase.
 
+## Tecnologías
 
-## NOTA
-Desactivar el firewall para conectar con el firebase.
+- [Astro](https://astro.build/)  
+- [Firebase Authentication](https://firebase.google.com/docs/auth)  
+- [TypeScript](https://www.typescriptlang.org/)  
+- [Tailwind CSS](https://tailwindcss.com/) *(opcional si lo usas para estilos)*  
+
+## Licencia
+
+Este proyecto se distribuye bajo la licencia **MIT**.

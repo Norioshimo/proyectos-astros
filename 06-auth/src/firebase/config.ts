@@ -7,12 +7,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyByjQWPzWsmbF9eWO1G9El4sxNT4dnZxRM",
-    authDomain: "astro-authentication-9dd97.firebaseapp.com",
-    projectId: "astro-authentication-9dd97",
-    storageBucket: "astro-authentication-9dd97.firebasestorage.app",
-    messagingSenderId: "791814558143",
-    appId: "1:791814558143:web:ac5563b2e2394a2e64910a"
+    apiKey: import.meta.env.PUBLIC_FIREBASE_API_KEY,
+    authDomain: import.meta.env.PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.PUBLIC_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
@@ -20,6 +20,6 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 auth.languageCode = 'es';
-export const  firebase={
-    app,auth
+export const firebase = {
+    app, auth
 }
