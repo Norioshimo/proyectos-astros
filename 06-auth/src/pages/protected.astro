@@ -1,16 +1,19 @@
 ---
-//import { firebase } from "@/firebase/config";
+import { firebase } from "@/firebase/config";
 import MainLayout from "@/layout/MainLayout.astro";
 
-const {user,isLoggedIn}=Astro.locals;
+const { user, isLoggedIn } = Astro.locals;
 
-if(!isLoggedIn || !user){
-  return Astro.redirect('/login');
+if (!isLoggedIn || !user) {
+  return Astro.redirect("/login");
 }
 
-const {avatar,email,emailVerified,name}= user;
+const { avatar, email, name } = user;
 
+const firebaseUser = firebase.auth.currentUser;
 
+await firebaseUser?.reload();
+const { emailVerified } = firebaseUser!;
 
 // SE CONTROLA POR MIDDLEWARE Y env.d.ts
 //const firebaseUser = firebase.auth.currentUser;
@@ -52,10 +55,8 @@ const {avatar,email,emailVerified,name}= user;
       <div class="text-center mt-2 text-3xl font-medium">{name}</div>
       <div class="text-center mt-2 font-light text-sm">{email}</div>
       <div class="text-center font-normal text-lg">
-		{
-			emailVerified?'Email Verificado':'Email No Verificado'
-		}
-	  </div>
+        {emailVerified ? "Email Verificado" : "Email No Verificado"}
+      </div>
       <div class="px-6 text-center mt-2 font-light text-sm">
         <p>Front end Developer, avid reader. Love to take a long walk, swim</p>
       </div>
