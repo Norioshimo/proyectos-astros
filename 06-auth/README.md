@@ -29,8 +29,6 @@ Incluye manejo de rutas privadas (`/protected`) y flujo completo de inicio y cie
    PUBLIC_FIREBASE_APP_ID=xxxx
    ```
 
-4. Asegúrate de importar y configurar Firebase en tu archivo `src/lib/firebase.ts`.
-
 ## Comandos
 
 Ejecuta estos comandos desde la raíz del proyecto:
