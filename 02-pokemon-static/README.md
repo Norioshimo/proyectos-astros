@@ -26,6 +26,9 @@ páginas estáticas con información de Pokémon.
 -   Astro — Framework para sitios estáticos modernos.
 -   PokéAPI — API pública de datos de Pokémon.
 -   Node.js — Entorno de ejecución para el desarrollo.
+-   Iconify - https://iconify.design/
+-   SolidJS - Isla integrado https://docs.astro.build/en/reference/directives-reference/#client-directives
+-   View Transitions - https://docs.astro.build/en/guides/view-transitions/#lifecycle-events
 
 ------------------------------------------------------------------------
 
