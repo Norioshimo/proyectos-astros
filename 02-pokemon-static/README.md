@@ -72,3 +72,6 @@ Ejecuta estos comandos desde la raíz del proyecto:
 
 Desarrollado por Norio Shimomoto como ejemplo educativo con Astro y
 PokéAPI.
+
+Página alojado en Netlify:
+https://atro-pokemon.netlify.app/
