@@ -5,22 +5,6 @@ páginas estáticas con información de Pokémon.
 
 ------------------------------------------------------------------------
 
-🌐 URLs del Proyecto
-
-  --------------------------------------------------------------------------
-  Descripción                       URL de Ejemplo
-  --------------------------------- ----------------------------------------
-  🧾 Lista general de Pokémon       http://localhost:4321/
-
-  📄 Lista paginada de Pokémon      http://localhost:4321/pokemons/1
-  (parámetro: número de página)     
-
-  🔍 Página individual de un        http://localhost:4321/pokemons/pidgeot
-  Pokémon por nombre                
-  --------------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
 🚀 Tecnologías Utilizadas
 
 -   Astro — Framework para sitios estáticos modernos.
