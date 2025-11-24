@@ -1,0 +1,32 @@
+---
+interface Props {
+  menuActived?: string;
+}
+
+const { menuActived } = Astro.props;
+---
+
+<header id="header" class="header d-flex align-items-center sticky-top">
+  <div
+    class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+  >
+    <a href="./" class="logo d-flex align-items-center">
+      <h1 class="sitename">Active</h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li>
+          <a href="/" class={menuActived === "Home" ? "active" : ""}>Home</a>
+        </li>
+        <li><a href="/about" class={menuActived === "About" ? "active" : ""}>About</a></li>
+        <li><a href="/services" class={menuActived === "Services" ? "active" : ""}>Services</a></li>
+        <li><a href="/portfolio" class={menuActived === "Portfolio" ? "active" : ""}>Portfolio</a></li>
+        <li><a href="/team"  class={menuActived === "Team" ? "active" : ""}>Team</a></li> 
+         
+        <li><a href="/contact"  class={menuActived === "Contact" ? "active" : ""}>Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+  </div>
+</header>
